@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#FFFFFF">
+    <title>Главная страница</title>
+    <link type="text/css" rel="stylesheet" href="./style.css" />
+    <link type="text/css" rel="stylesheet" href="./pages/Home/Home.css" />
+</head>
+<body>
+<!--ASIDE COMPONENT-->
+<aside class="aside">
+    <nav class="aside__nav">
+        <ul class="aside__ul__list">
+            <!--LIST ELEMENTS-->
+        </ul>
+    </nav>
+    <!--FOOTER COMPONENT-->
+    <footer class="footer">
+        <div class="div__status__content">
+            <div class="content__image">
+                <img class="user__icon" src="./assets/user-icon.png" alt="Аккаунт" />
+            </div>
+            <div class="content__info">
+                <p class="info__head">Сотрудник</p>
+                <p class="info__settings">Настройки</p>
+            </div>
+        </div>
+        <div class="content__image">
+            <img class="select__arrow" src="./assets/select-arrow.svg" alt="Подробнее" />
+        </div>
+    </footer>
+</aside>
+<!--MAIN COMPONENT-->
+<main class="main">
+    <!--HEADER COMPONENT-->
+    <header class="header">
+        <p class="page__name">Главная страница</p>
+        <div class="more__container">
+            <img class="more__image" src="./assets/more-icon.svg" alt="Еще" />
+        </div>
+    </header>
+    <!--SECTION COMPONENT-->
+    <section class="section">
+        <div class="cards">
+            <div class="cards__fluid">
+                <!--CARDS COMPONENTS-->
+                <div class="card">
+                    <div class="card__mask green">
+                        <div class="card__content">
+                            <p class="card__info">Животные</p>
+                        </div>
+                    </div>
+                    <img class="card__background" src="./assets/monkeys.png" alt="Перейти" />
+                </div>
+                <div class="card">
+                    <div class="card__mask orange">
+                        <div class="card__content">
+                            <p class="card__info">Сотрудники</p>
+                        </div>
+                    </div>
+                    <img class="card__background" src="./assets/employees.png" alt="Перейти" />
+                </div>
+                <div class="card">
+                    <div class="card__mask blue">
+                        <div class="card__content">
+                            <p class="card__info">Здоровье</p>
+                        </div>
+                    </div>
+                    <img class="card__background" src="./assets/health.png" alt="Перейти" />
+                </div>
+            </div>
+        </div>
+        <div class="page__content">
+            <p class="div__p__content">Содержимое страницы</p>
+        </div>
+    </section>
+</main>
+<script defer src="./pages/Home/Home.js"></script>
+</body>
+</html>
