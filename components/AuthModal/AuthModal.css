@@ -1,0 +1,226 @@
+body {
+    position: relative;
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: 1fr 370px 1fr;
+    grid-template-rows: 1fr 390px 1fr;
+    grid-auto-rows: minmax(170px, auto);
+    grid-auto-columns: minmax(20px, auto);
+
+    background: #CCD2DB;
+}
+
+div.auth__modal__container {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: #FFFFFF;
+    border: 1px solid #DCE0E5;
+    /* Shadows/Shadow-1 */
+    box-shadow: 0 1px 2px rgba(128, 128, 128, 0.12);
+    border-radius: 8px;
+}
+
+div.heading__frame {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 20px 24px 0;
+    gap: 10px;
+
+    width: 100%;
+    height: auto;
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+p.heading__text {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 140%;
+
+    color: #14181F;
+}
+
+div.form__frame {
+    width: 100%;
+    height: auto;
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+form.form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 24px;
+    gap: 20px;
+
+    width: 100%;
+    height: auto;
+}
+
+label.auth__form__label {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 0 6px;
+    gap: 10px;
+
+    width: 100%;
+    height: auto;
+
+    margin: 0 auto;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 140%;
+
+    color: #14181F;
+}
+
+div.input {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+input.auth__form__input {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 10px;
+    gap: 8px;
+
+    width: 100%;
+    height: 40px;
+
+    margin-top: -20px;
+
+    background: #FFFFFF;
+    border: 1px solid #DCE0E5;
+    border-radius: 8px;
+
+    transition: border 0.1s ease;
+}
+
+input.auth__form__input:focus {
+    border: 2px solid #3348FF;
+}
+
+div.input.error input.auth__form__input {
+    border: 1px solid #DF0C3D;
+}
+
+div.input.error:after {
+    content: "Неверный формат данных";
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 6px 0 0;
+    gap: 8px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+
+    color: #DF0C3D;
+}
+
+input.form__submit__button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 12px;
+    gap: 8px;
+
+    width: 100%;
+    height: 40px;
+
+    background: #3348FF;
+    box-shadow: inset 0 7px 12px rgba(255, 255, 255, 0.08), inset 0 -2px 2px rgba(48, 48, 48, 0.1);
+    border-radius: 8px;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 140%;
+
+    color: #FFFFFF;
+
+    transition: background 0.1s ease;
+}
+
+input.form__submit__button:hover {
+    background: rgba(82, 97, 254, 1);
+}
+
+input.form__submit__button:active {
+    background: #3348FF;
+    box-shadow: inset 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+div.notify__frame {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px 24px;
+    gap: 10px;
+
+    width: 100%;
+    height: auto;
+
+    background: #F6F7F9;
+    border-radius: 0 0 8px 8px;
+
+    flex: none;
+    order: 2;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+p.notify__text {
+    /*padding: 0 48px;*/
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 140%;
+    text-align: center;
+
+    color: #14181F;
+}
+
+p.notify__text span {
+    color: #3348FF;
+}

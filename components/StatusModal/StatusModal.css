@@ -1,0 +1,142 @@
+body {
+    position: relative;
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: 1fr 300px 1fr;
+    grid-template-rows: 1fr 222px 1fr;
+    grid-auto-rows: minmax(170px, auto);
+    grid-auto-columns: minmax(20px, auto);
+
+    background: #CCD2DB;
+}
+
+div.status__modal__container {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 16px;
+
+    width: 100%;
+    height: fit-content;
+
+    background: #FFFFFF;
+    border: 1px solid #B6C1CA;
+    box-shadow: 0 6px 12px rgba(51, 51, 51, 0.08);
+    border-radius: 12px;
+}
+
+div.status__image__container {
+    position: relative;
+
+    width: 56px;
+    height: 56px;
+
+    border-radius: 32px;
+}
+
+div.status__image__container.success {
+    background: #BEFEC7;
+}
+
+div.status__image__container.error {
+
+    background: #FFDEE0;
+}
+
+img.status__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+
+    object-fit: scale-down;
+
+    transform: translate(-50%, -50%);
+}
+
+div.modal__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    gap: 8px;
+
+    width: 100%;
+    height: auto;
+}
+
+p.status__heading {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 140%;
+    text-align: center;
+
+    color: #14181F;
+}
+
+p.status__info {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 140%;
+    text-align: center;
+
+    color: #525E6F;
+}
+
+div.modal__button {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0;
+    gap: 10px;
+
+    width: 100%;
+    height: 40px;
+}
+
+button.ok__button {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 12px;
+    gap: 8px;
+
+    width: 100%;
+    height: 40px;
+
+    background: #FFFFFF;
+    border: 1px solid #DCE0E5;
+    box-shadow: inset 0 7px 12px rgba(255, 255, 255, 0.08), inset 0 -2px 2px rgba(48, 48, 48, 0.1);
+    border-radius: 8px;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 140%;
+
+    color: #14181F;
+
+    transition: background 0.1s ease;
+}
+
+button.ok__button:hover {
+    background: #F6F7F9;
+}
+
+button.ok__button:active {
+    background: #FFFFFF;
+    box-shadow: inset 0 4px 12px rgba(0, 0, 0, 0.12);
+}
