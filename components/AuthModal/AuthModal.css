@@ -122,6 +122,8 @@ input.auth__form__input {
     border: 1px solid #DCE0E5;
     border-radius: 8px;
 
+    color: #14181F;
+
     transition: border 0.1s ease;
 }
 
@@ -155,6 +157,10 @@ div.input.error:after {
     color: #DF0C3D;
 }
 
+a {
+    width: 100%;
+}
+
 input.form__submit__button {
     display: flex;
     flex-direction: row;
@@ -177,7 +183,7 @@ input.form__submit__button {
 
     color: #FFFFFF;
 
-    transition: background 0.1s ease;
+    transition: all 0.1s ease;
 }
 
 input.form__submit__button:hover {

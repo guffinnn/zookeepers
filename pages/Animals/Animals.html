@@ -7,6 +7,7 @@
     <title>Журнал учета животных</title>
     <link type="text/css" rel="stylesheet" href="../../style.css" />
     <link type="text/css" rel="stylesheet" href="../Home/Home.css" />
+    <link type="text/css" rel="stylesheet" href="./Animals.css" />
 </head>
 <body>
 <!--ASIDE COMPONENT-->
@@ -18,23 +19,27 @@
     </nav>
     <!--FOOTER COMPONENT-->
     <footer class="footer">
+        <!--BURGER MENU-->
         <div class="burger__menu">
             <img class="burger__icon" src="../../assets/burger.svg" alt="Меню">
         </div>
-        <div class="footer">
-            <div class="div__status__content">
+        <!--LINK TO AUTH MODAL-->
+        <a href="../../components/AuthModal/AuthModal.html">
+            <div class="footer">
+                <div class="div__status__content">
+                    <div class="content__image">
+                        <img class="user__icon" src="../../assets/user-icon.png" alt="Аккаунт" />
+                    </div>
+                    <div class="content__info">
+                        <p class="info__head">Сотрудник</p>
+                        <p class="info__settings">Настройки</p>
+                    </div>
+                </div>
                 <div class="content__image">
-                    <img class="user__icon" src="../../assets/user-icon.png" alt="Аккаунт" />
-                </div>
-                <div class="content__info">
-                    <p class="info__head">Сотрудник</p>
-                    <p class="info__settings">Настройки</p>
+                    <img class="select__arrow" src="../../assets/select-arrow.svg" alt="Подробнее" />
                 </div>
             </div>
-            <div class="content__image">
-                <img class="select__arrow" src="../../assets/select-arrow.svg" alt="Подробнее" />
-            </div>
-        </div>
+        </a>
     </footer>
 </aside>
 <!--MAIN COMPONENT-->
@@ -42,14 +47,37 @@
     <!--HEADER COMPONENT-->
     <header class="header">
         <p class="page__name">Журнал учета животных</p>
-        <div class="more__container">
-            <img class="more__image" src="../../assets/more-icon.svg" alt="Еще" />
+        <!--RIGHT PART-->
+        <div class="buttons__frame">
+            <div class="add__button__container">
+                <button class="add__button">Добавить животное</button>
+            </div>
+            <div class="more__container">
+                <img class="more__image" src="../../assets/more-icon.svg" alt="Еще" />
+            </div>
         </div>
     </header>
     <!--SECTION COMPONENT-->
     <section class="section">
-        <div class="page__content">
-            <p class="div__p__content">Содержимое страницы</p>
+        <!--SEARCH BOX-->
+        <div class="search__box__container">
+            <input type="text"
+                   id="search"
+                   placeholder="Поиск"
+                   class="search__box" />
+        </div>
+        <div class="page__content table__content">
+            <!--TABLE COMPONENT-->
+            <table class="table">
+                <thead class="thead">
+                <tr>
+                    <!--TABLE HEADING-->
+                </tr>
+                </thead>
+                <tbody class="tbody">
+                    <!--TABLE CONTENT-->
+                </tbody>
+            </table>
         </div>
     </section>
 </main>

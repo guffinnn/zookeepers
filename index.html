@@ -21,20 +21,23 @@
         <div class="burger__menu">
             <img class="burger__icon" src="./assets/burger.svg" alt="Меню">
         </div>
-        <div class="footer">
-            <div class="div__status__content">
+        <!--LINK TO AUTH MODAL-->
+        <a href="./components/AuthModal/AuthModal.html">
+            <div class="footer">
+                <div class="div__status__content">
+                    <div class="content__image">
+                        <img class="user__icon" src="./assets/user-icon.png" alt="Аккаунт" />
+                    </div>
+                    <div class="content__info">
+                        <p class="info__head">Сотрудник</p>
+                        <p class="info__settings">Настройки</p>
+                    </div>
+                </div>
                 <div class="content__image">
-                    <img class="user__icon" src="./assets/user-icon.png" alt="Аккаунт" />
-                </div>
-                <div class="content__info">
-                    <p class="info__head">Сотрудник</p>
-                    <p class="info__settings">Настройки</p>
+                    <img class="select__arrow" src="./assets/select-arrow.svg" alt="Подробнее" />
                 </div>
             </div>
-            <div class="content__image">
-                <img class="select__arrow" src="./assets/select-arrow.svg" alt="Подробнее" />
-            </div>
-        </div>
+        </a>
     </footer>
 </aside>
 <!--MAIN COMPONENT-->
@@ -51,21 +54,24 @@
         <div class="cards">
             <div class="cards__fluid">
                 <!--CARDS COMPONENTS-->
-                <div class="card">
-                    <div class="card__mask green">
-                        <div class="card__content">
-                            <p class="card__info">Животные</p>
+                <!--LINK TO ANIMALS-->
+                <a href="./pages/Animals/Animals.html">
+                    <div class="card">
+                        <div class="card__mask green">
+                            <div class="card__content">
+                                <p class="card__info">Животные</p>
+                            </div>
                         </div>
+                        <img class="card__background" src="./assets/gibbon.jpeg" alt="Перейти" />
                     </div>
-                    <img class="card__background" src="./assets/monkeys.png" alt="Перейти" />
-                </div>
+                </a>
                 <div class="card">
                     <div class="card__mask orange">
                         <div class="card__content">
                             <p class="card__info">Сотрудники</p>
                         </div>
                     </div>
-                    <img class="card__background" src="./assets/employees.png" alt="Перейти" />
+                    <img class="card__background" src="./assets/zookeeper.jpeg" alt="Перейти" />
                 </div>
                 <div class="card">
                     <div class="card__mask blue">
@@ -73,7 +79,7 @@
                             <p class="card__info">Здоровье</p>
                         </div>
                     </div>
-                    <img class="card__background" src="./assets/health.png" alt="Перейти" />
+                    <img class="card__background" src="./assets/medicine.jpeg" alt="Перейти" />
                 </div>
             </div>
         </div>

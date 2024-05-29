@@ -92,6 +92,10 @@ p.status__info {
     color: #525E6F;
 }
 
+a {
+    width: 100%;
+}
+
 div.modal__button {
     display: flex;
     flex-direction: column;

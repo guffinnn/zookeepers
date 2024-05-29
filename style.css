@@ -3,8 +3,8 @@
 @font-face {
     font-family: 'Oddval SemiBold';
     src:
-            url('./assets/fonts/Oddval-SemiBold.ttf') format('ttf'),
-            url('./assets/fonts/Oddval-SemiBold.otf') format('otf');
+            url('./assets/fonts/Oddval-SemiBold.woff') format('woff'),
+            url('./assets/fonts/Oddval-SemiBold.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
@@ -18,7 +18,6 @@
     font-family: "Inter", sans-serif;
     text-decoration: none;
     outline: none;
-    transition: all 0.3s ease-in-out;
 }
 
 body {
