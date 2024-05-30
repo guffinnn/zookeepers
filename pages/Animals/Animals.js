@@ -90,4 +90,34 @@ window.addEventListener('load', () => {
 
         count++;
     }
+
+    const searchBoxInput = document.querySelector('.search__box'),
+          searchBox = document.querySelector('.search__box__container');
+    searchBoxInput.addEventListener('focus', () => {
+        searchBox.style.border = '2px solid #3348FF';
+    });
+    searchBoxInput.addEventListener('blur', () => {
+        searchBox.style.border = ' 1px solid #DCE0E5';
+    });
+
+    // TODO: Delete
+    let button = document.querySelector('.add__button');
+    button.addEventListener('click', () => {
+        button.style.backgroundColor = 'red';
+        button.innerText = 'Фон изменен на красный';
+    });
+
+    // TODO: Delete
+    button.addEventListener('dblclick', () => {
+        let message = prompt('Введите цвет фона:');
+        button.style.backgroundColor = message;
+
+        message = prompt('Введите цвет текста:');
+        button.style.color = message;
+
+        message = prompt('Введите размер шрифта:');
+        button.style.fontSize = message;
+
+        button.innerText = 'Стили изменены';
+    });
 });

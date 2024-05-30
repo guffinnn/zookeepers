@@ -1,0 +1,221 @@
+body {
+    position: relative;
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: 1fr 370px 1fr;
+    grid-template-rows: 1fr 535px 1fr;
+    grid-auto-rows: minmax(170px, auto);
+    grid-auto-columns: minmax(20px, auto);
+
+    background: #CCD2DB;
+}
+
+div.add__modal__container {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0;
+
+    width: 100%;
+    height: fit-content;
+
+    background: #FFFFFF;
+    border: 1px solid #DCE0E5;
+    /* Shadows/Shadow-1 */
+    box-shadow: 0 1px 2px rgba(128, 128, 128, 0.12);
+    border-radius: 8px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.input__with__label {
+    box-sizing: border-box;
+
+    padding: 8px 10px;
+
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "label input";
+    align-items: center;
+    align-content: center;
+    gap: 8px;
+
+    width: 100%;
+    height: 40px;
+
+    background: #FFFFFF;
+    border: 1px solid #DCE0E5;
+    box-shadow: inset 0 7px 12px rgba(255, 255, 255, 0.08), inset 0 -2px 2px rgba(48, 48, 48, 0.1);
+    border-radius: 8px;
+
+    transition: border 0.1s ease;
+}
+
+/*
+TODO: Add selector for active child
+*/
+.clicked {
+    border: 2px solid #3348FF;
+}
+
+.add__form__label {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr;
+
+    width: 100%;
+
+    grid-row: 1;
+    grid-column: 1 / 2;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 140%;
+
+    color: #14181F;
+}
+
+.add__form__input {
+    grid-row: 1;
+    grid-column: 2 / 3;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 140%;
+
+    color: #14181F;
+}
+
+select.add__form__input {
+    position: relative;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.add__form__label.custom {
+    position: relative;
+    gap: 8px;
+}
+
+.add__form__label.custom:after {
+    content: url("../../assets/select-arrow.svg");
+
+    grid-row: 1;
+    grid-column: 1 / 3;
+
+    display: inline-block;
+    width: fit-content;
+    height: fit-content;
+
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%) rotate(180deg);
+}
+
+label.custom {
+    grid-row: 1;
+    grid-column: 1 / 3;
+}
+
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+input[type=date]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    z-index: 2;
+}
+
+.input__with__label input[type="date"] {
+    position: relative;
+    z-index: 1;
+}
+
+.input__with__label input[type="date"]::after {
+    content: url("../../assets/calendar.svg");
+
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: 3px;
+
+    transform: translateY(-50%);
+
+    z-index: 0;
+}
+
+.textarea {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 10px;
+    gap: 8px;
+
+    width: 100%;
+    height: 85px;
+
+    background: #FFFFFF;
+    border: 1px solid #DCE0E5;
+    border-radius: 8px;
+
+    margin-top: -20px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+
+    color: #14181F;
+
+    transition: border 0.1s ease;
+}
+
+.input.textarea__container {
+    position: relative;
+    min-width: fit-content;
+    height: fit-content;
+    width: 100%;
+}
+
+textarea {
+    width: 323px;
+    max-width: 323px;
+    min-width: 323px;
+}
+
+textarea::-webkit-resizer {
+    opacity: 0;
+    z-index: 2;
+}
+
+.input.textarea__container:after {
+    content: url("../../assets/resizer.svg");
+    position: absolute;
+    bottom: 12px;
+    right: 4px;
+    width: 8px;
+    height: 8px;
+    object-fit: fill;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.textarea:focus {
+    border: 2px solid #3348FF;
+}

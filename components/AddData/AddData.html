@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#CCD2DB">
+    <title>Авторизация</title>
+    <link type="text/css" rel="stylesheet" href="../../style.css" />
+    <link type="text/css" rel="stylesheet" href="./AddData.css" />
+    <link type="text/css" rel="stylesheet" href="../AuthModal/AuthModal.css" />
+</head>
+<body>
+<div class="add__modal__container">
+    <div class="heading__frame">
+        <p class="heading__text">Заполните поля</p>
+    </div>
+    <div class="form__frame">
+        <form class="form">
+            <label for="nickname" class="auth__form__label">Кличка</label>
+            <div class="input">
+                <input type="text"
+                       id="nickname"
+                       placeholder="Введите кличку"
+                       class="auth__form__input"
+                />
+            </div>
+            <div class="input__with__label">
+                <label for="species" class="add__form__label custom">Вид:
+                    <select id="species" class="add__form__input">
+                        <!--VARIANTS-->
+                        <option class="option" value="NULL">Выберите вид</option>
+                    </select>
+                </label>
+            </div>
+            <div class="input__with__label">
+                <label for="date_of_birth" class="add__form__label">Дата рождения:</label>
+                <input type="date"
+                       id="date_of_birth"
+                       placeholder="Выберите дату"
+                       class="add__form__input"
+                />
+            </div>
+            <div class="input__with__label">
+                <label for="date_of_registration" class="add__form__label">Дата зачисления:</label>
+                <input type="date"
+                       id="date_of_registration"
+                       placeholder="Выберите дату"
+                       class="add__form__input"
+                />
+            </div>
+            <label for="medical_indicators" class="auth__form__label">Мед. показания</label>
+            <div class="input textarea__container">
+                <textarea id="medical_indicators"
+                          placeholder="Опишите мед. обследования"
+                          class="textarea"></textarea>
+            </div>
+            <!--LINK TO STATUS MODAL-->
+            <a href="../StatusModal/StatusModal.html">
+                <input type="button" value="Подтвердить действия" class="form__submit__button" />
+            </a>
+        </form>
+    </div>
+</div>
+<script defer src="./AddData.js"></script>
+</body>
+</html>

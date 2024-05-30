@@ -312,7 +312,10 @@ div.search__box__container:hover {
     border: 1px solid #B6C1CA;
 }
 
-div.search__box__container:focus {
+/*
+TODO: Add selector for active child
+*/
+.clicked {
     border: 2px solid #3348FF;
 }
 

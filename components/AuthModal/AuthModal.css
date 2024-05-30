@@ -124,6 +124,11 @@ input.auth__form__input {
 
     color: #14181F;
 
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 140%;
+
     transition: border 0.1s ease;
 }
 
