@@ -10,7 +10,6 @@ const LIST_ROWS = [
 
 window.addEventListener('load', () => {
     const asideUlList = document.querySelector('.aside__ul__list');
-
     LIST_ROWS.forEach(item => {
         const listItem = document.createElement('li');
         const cardsContainer = document.querySelector('.cards__fluid');
@@ -18,5 +17,13 @@ window.addEventListener('load', () => {
         listItem.innerHTML = `<div class="content ${item === "Главная" && 'active'}">${item}</div>`;
         listItem.classList.add('list__point');
         asideUlList.appendChild(listItem);
+    });
+
+    const burgerMenu = document.querySelector('.burger__menu');
+    burgerMenu.addEventListener('click', () => {
+        document.querySelector('body').classList.toggle('open');
+        document.querySelector('aside.aside').classList.toggle('open');
+        document.querySelector('nav').classList.toggle('open');
+        document.querySelector('main').classList.toggle('open');
     });
 });

@@ -4,9 +4,10 @@ body {
     width: 100vw;
     height: 100vh;
     grid-template-columns: 1fr 300px 1fr;
-    grid-template-rows: 1fr 222px 1fr;
+    grid-template-rows: 1fr minmax(222px, 315px) 1fr;
     grid-auto-rows: minmax(170px, auto);
     grid-auto-columns: minmax(20px, auto);
+    align-items: center;
 
     background: #CCD2DB;
 }

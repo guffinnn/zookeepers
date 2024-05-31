@@ -8,6 +8,10 @@ body {
     grid-auto-rows: minmax(240px, auto);
 }
 
+a {
+    width: 100%;
+}
+
 aside.aside {
     display: grid;
     grid-template-rows: 30px 1fr 50px auto;
@@ -481,6 +485,49 @@ img.card__background {
     text-align: center;
 
     color: #525E6F;
+}
+
+/* ANIMATION */
+body.open {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+            "aside"
+            "main";
+}
+
+aside.aside.open {
+    grid-row: 1 / 2;
+    height: 100vh;
+}
+
+aside.aside.open footer.footer {
+    position: relative;
+    bottom: unset;
+    left: unset;
+    transform: translate(0, 0);
+    animation: open_menu 0.3s ease;
+}
+
+@keyframes open_menu {
+    0% {
+        opacity: 0;
+        scale: 1.5;
+    }
+
+    100% {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+nav.open {
+    display: block;
+    animation: open_menu 0.3s ease;
+}
+
+main.open {
+    display: none;
+    grid-row: 2 / 3;
 }
 
 @media(max-width: 600px) {

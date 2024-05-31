@@ -1,0 +1,33 @@
+button.ok__button.green {
+    color: #FFFFFF;
+    margin-bottom: -6px;
+
+    background: #00A81C;
+    box-shadow: inset 0 7px 12px rgba(255, 255, 255, 0.08), inset 0 -2px 2px rgba(48, 48, 48, 0.1);
+}
+
+button.ok__button.green:hover {
+    background: #00BD1F;
+}
+
+button.ok__button.green:active {
+    background: #00A81C;
+    box-shadow: inset 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+button.ok__button.red {
+    color: #FFFFFF;
+    margin-bottom: -6px;
+
+    background: #DF0C3D;
+    box-shadow: inset 0 7px 12px rgba(255, 255, 255, 0.08), inset 0 -2px 2px rgba(48, 48, 48, 0.1);
+}
+
+button.ok__button.red:hover {
+    background: #F31246;
+}
+
+button.ok__button.red:active {
+    background: #DF0C3D;
+    box-shadow: inset 0 4px 12px rgba(0, 0, 0, 0.12);
+}

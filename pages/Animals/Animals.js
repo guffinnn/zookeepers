@@ -100,24 +100,11 @@ window.addEventListener('load', () => {
         searchBox.style.border = ' 1px solid #DCE0E5';
     });
 
-    // TODO: Delete
-    let button = document.querySelector('.add__button');
-    button.addEventListener('click', () => {
-        button.style.backgroundColor = 'red';
-        button.innerText = 'Фон изменен на красный';
-    });
-
-    // TODO: Delete
-    button.addEventListener('dblclick', () => {
-        let message = prompt('Введите цвет фона:');
-        button.style.backgroundColor = message;
-
-        message = prompt('Введите цвет текста:');
-        button.style.color = message;
-
-        message = prompt('Введите размер шрифта:');
-        button.style.fontSize = message;
-
-        button.innerText = 'Стили изменены';
+    const burgerMenu = document.querySelector('.burger__menu');
+    burgerMenu.addEventListener('click', () => {
+        document.querySelector('body').classList.toggle('open');
+        document.querySelector('aside.aside').classList.toggle('open');
+        document.querySelector('nav').classList.toggle('open');
+        document.querySelector('main').classList.toggle('open');
     });
 });
