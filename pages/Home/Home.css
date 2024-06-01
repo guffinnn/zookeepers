@@ -10,6 +10,8 @@ body {
 
 a {
     width: 100%;
+    text-decoration: none;
+    color: #14181F;
 }
 
 aside.aside {

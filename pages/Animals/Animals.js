@@ -1,11 +1,11 @@
 const LIST_ROWS = [
-    "Главная",
-    "Животные",
-    "Рабочее время",
-    "Мед. обследования",
-    "Кормление",
-    "Уборка",
-    "Сотрудники"
+    { name: "Главная", link: "../../index.html" },
+    { name: "Животные", link: "../../pages/Animals/Animals.html" },
+    { name: "Рабочее время", link: "#" },
+    { name: "Мед. обследования", link: "#" },
+    { name: "Кормление", link: "../../pages/Feeding/Feeding.html" },
+    { name: "Уборка", link: "#" },
+    { name: "Сотрудники", link: "#" }
 ];
 
 const TABLE_COLUMNS = [
@@ -43,8 +43,12 @@ window.addEventListener('load', () => {
     const asideUlList = document.querySelector('.aside__ul__list');
     LIST_ROWS.forEach(item => {
         const listItem = document.createElement('li');
+        const link = document.createElement('a');
 
-        listItem.innerHTML = `<div class="content ${item === "Животные" && 'active'}">${item}</div>`;
+        link.innerHTML= `<div class="content ${item.name === "Животные" && 'active'}">${item.name}</div>`;
+        link.href = item.link;
+
+        listItem.appendChild(link);
         listItem.classList.add('list__point');
         asideUlList.appendChild(listItem);
     });
