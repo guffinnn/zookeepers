@@ -134,4 +134,12 @@ window.addEventListener('load', () => {
 
         tableBody.appendChild(tableRow);
     });
+
+    const burgerMenu = document.querySelector('.burger__menu');
+    burgerMenu.addEventListener('click', () => {
+        document.querySelector('body').classList.toggle('open');
+        document.querySelector('aside.aside').classList.toggle('open');
+        document.querySelector('nav').classList.toggle('open');
+        document.querySelector('main').classList.toggle('open');
+    });
 });

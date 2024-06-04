@@ -1,3 +1,17 @@
+p, .p-2 {
+    padding: 0;
+    margin: 0;
+}
+
+.form-select:focus, .form-control:focus {
+    box-shadow: none;
+    border: 2px solid #3348FF;
+}
+
+.form-check-input:checked {
+    box-shadow: none;
+}
+
 body.add__form__body {
     grid-template-columns: 1fr 370px 1fr;
     grid-template-rows: 1fr minmax(535px, auto) 1fr;
@@ -40,12 +54,16 @@ div.add__modal__container {
     width: 100%;
     height: 40px;
 
-    background: #FFFFFF;
     border: 1px solid #DCE0E5;
     box-shadow: inset 0 7px 12px rgba(255, 255, 255, 0.08), inset 0 -2px 2px rgba(48, 48, 48, 0.1);
     border-radius: 8px;
 
     transition: border 0.1s ease;
+}
+
+.input-group.disabled {
+    opacity: 0.6;
+    color: #6F7C8E;
 }
 
 /*
@@ -85,12 +103,32 @@ TODO: Add selector for active child
     color: #14181F;
 }
 
-select.add__form__input {
+/*select.add__form__input {
     position: relative;
 
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+}*/
+
+.input-group-text {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    background: #FFFFFF;
+    border: 1px solid #DCE0E5;
+    box-shadow: inset 0 7px 12px rgba(255, 255, 255, 0.08), inset 0 -2px 2px rgba(48, 48, 48, 0.1);
+    border-radius: 8px;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 140%;
+
+    color: #14181F;
 }
 
 .add__form__label.custom {
@@ -146,6 +184,11 @@ input[type=date]::-webkit-calendar-picker-indicator {
     z-index: 0;
 }
 
+.textarea, #input-group-left-example {
+    margin-top: -20px;
+    box-shadow: none;
+}
+
 .textarea {
     box-sizing: border-box;
 
@@ -161,8 +204,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
     background: #FFFFFF;
     border: 1px solid #DCE0E5;
     border-radius: 8px;
-
-    margin-top: -20px;
 
     font-style: normal;
     font-weight: 400;
@@ -195,7 +236,7 @@ textarea::-webkit-resizer {
 .input.textarea__container:after {
     content: url("../../assets/resizer.svg");
     position: absolute;
-    bottom: 12px;
+    bottom: 14px;
     right: 4px;
     width: 8px;
     height: 8px;
